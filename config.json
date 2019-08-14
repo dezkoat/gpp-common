@@ -1,0 +1,7 @@
+{
+  "name": "common",
+  "compile_flags": "-std=c++14",
+  "link_flags": "-lpthread -L/usr/local/lib -Wl,-rpath,/usr/local/lib",
+  "defines": ["ASIO_STANDALONE"],
+  "is_lib": true
+}
