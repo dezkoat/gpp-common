@@ -45,9 +45,9 @@ class Module:
 
         build_path = os.path.join(path, 'build')
         src_path = os.path.join(path, 'src')
-
         path_in = os.path.join(root, f)
         path_out = re.sub(src_path, build_path, re.sub(r'\.cpp$', '.o', path_in))
+
         self.compile_file(path, path_in, path_out)
         objects.append(path_out)
 
