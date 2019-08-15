@@ -7,6 +7,22 @@ Redis::Redis() {
   context_ = redisConnect("localhost", 6379);
 }
 
+Redis::Redis(const Redis& other) {
+  context_ = other.context_;
+}
+
+Redis::Redis(Redis&& other) {
+  context_ = other.context_;
+}
+
+Redis& Redis::operator=(const Redis& other) {
+  context_ = other.context_;
+}
+
+Redis& Redis::operator=(Redis&& other) {
+  context_ = other.context_;
+}
+
 Redis::~Redis() {
   if (context_ != nullptr) {
     redisFree(context_);

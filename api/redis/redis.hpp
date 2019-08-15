@@ -12,9 +12,11 @@ typedef std::pair<std::string, std::string> KeyPair;
 
 class Redis {
  public:
-  Redis(const Redis&) = delete;
-  Redis& operator=(const Redis&) = delete;
   Redis();
+  Redis(const Redis&);
+  Redis(Redis&&);
+  Redis& operator=(const Redis&);
+  Redis& operator=(Redis&&);
   ~Redis();
 
   void LPush(const std::string& key, const std::string& val);
