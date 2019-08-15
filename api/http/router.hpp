@@ -38,8 +38,7 @@ class Router {
     Request::MethodType method_type,
     RouterMethod method
   );
-  friend class Connection;
-  friend class ConnectionSecure;
+  friend class ConnectionBase;
 };
 
 };

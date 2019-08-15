@@ -22,6 +22,10 @@ class ConnectionBase : public std::enable_shared_from_this<ConnectionBase> {
   virtual void Stop() {};
 
  protected:
+  virtual void DoRead() {}
+  virtual void DoWrite() {}
+  void ReadSome(std::error_code ec, std::size_t bytes_transferred);
+
   ConnectionManager& connection_manager_;
   std::map<const std::string, std::shared_ptr<Router>>& routers_;
   std::array<char, 8192> buffer_;
