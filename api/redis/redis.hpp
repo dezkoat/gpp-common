@@ -12,6 +12,8 @@ typedef std::pair<std::string, std::string> KeyPair;
 
 class Redis {
  public:
+  Redis(const Redis&) = delete;
+  Redis& operator=(const Redis&) = delete;
   Redis();
   ~Redis();
 

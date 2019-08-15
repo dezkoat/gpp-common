@@ -1,3 +1,8 @@
 #!/bin/sh
 
-sonar-scanner -Dsonar.projectKey=gpp.common -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=10258738c792e325c314fc7e143f90dbdda86c1a
+sonar-scanner \
+  -Dsonar.projectKey=gpp-common \
+  -Dsonar.organization=gpp \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=a1dfc8b3808a99bf6c6662ed4b06952fd6f25da4
